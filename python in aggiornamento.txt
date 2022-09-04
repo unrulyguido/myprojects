@@ -1,0 +1,455 @@
+my_baby_bool = "true"
+
+print(type(my_baby_bool))
+
+my_baby_bool_two = True
+
+print(type(my_baby_bool_two))
+
+
+You’ll notice that instead of “then” we have a colon, :. That tells the computer that what’s coming next 
+is what should be executed if the condition is met.
+
+Let’s take a look at another conditional statement:
+
+> greater than
+>= greater than or equal to
+< less than
+<= less than or equal to
+
+There are three boolean operators that we will cover:
+
+and
+or
+not
+Let’s start with and.
+
+
+Only one component needs to be True for an or statement to be True.
+
+In English, or implies that if one component is True, 
+then the other component must be False. This is not true in Python. If an or statement has two True components, it is also True.
+
+
+
+The final boolean operator we will cover is not. This operator is straightforward: 
+when applied to any boolean expression it reverses the boolean value. So if we have a True statement and apply a not operator we
+ get a False statement.
+
+if not credits >= 120:
+  print("You do not have enough credits to graduate.")
+if not gpa >= 2.0:
+  print("Your GPA is not high enough to graduate.")
+if not (credits >= 120) and not (gpa >= 2.0):
+  print("You do not meet either requirement to graduate!")
+
+else statements allow us to elegantly describe what we want our code to do when certain conditions are not met.
+
+else statements always appear in conjunction with if statements. Consider our waking-up example to see how this works:
+
+
+An elif statement checks another condition after the previous if statements conditions aren’t met.
+
+We can use elif statements to control the order we want our program to check each of our conditional statements.
+ First, the if statement is checked, then each elif statement is checked from top to bottom, 
+then finally the else code is executed if none of the previous conditions have been met.
+
+
+
+print("I have information for the following planets:\n")
+
+print("   1. Venus   2. Mars    3. Jupiter")
+print("   4. Saturn  5. Uranus  6. Neptune\n")
+ 
+weight = 185
+planet = 3
+
+# Write an if statement below:
+
+
+if planet == 1:
+  weight = weight * 0.91
+elif planet == 2:
+  weight = weight * 0.38
+elif planet == 3:
+  weight = weight * 2.34
+elif planet == 4:
+  weight = weight * 1.06
+elif planet == 5:
+  weight = weight * 0.92
+elif planet == 6:
+  weight = weight * 1.19
+
+print("Your weight:", weight)
+
+
+
+
+
+if len(name) == 0
+Within the if statement, when there is no name provided, we can just print the question:
+
+if name == "":
+  print("Question: " + question)
+Otherwise, we can print the name and the question within an else statement block:
+
+else:
+  print(name + " asks: " + question)
+
+
+
+
+
+
+if question == "":
+  # do something
+or
+
+if len(question) == 0:
+  # do something
+Using either of these conditions to check that the question is empty, 
+we will write a print() statement within the if statement block that will output a message, like so:
+
+if question == "":
+  print("The Magic 8-Ball cannot provide a fortune unless you ask it something.")
+Else, if a question is provided, we can run the other print() statements:
+
+else:
+  print(name + " asks: " + question)
+  print("Magic 8-Ball's answer: " + answer)
+
+
+# Sal's Shipping
+# Sonny Li
+
+weight = 80
+
+# Ground Shipping 🚚
+
+if weight <= 2:
+  cost_ground = weight * 1.5 + 20
+elif weight <= 6:
+  cost_ground = weight * 3.00 + 20
+elif weight <= 10:
+  cost_ground = weight * 4.00 + 20
+else:
+  cost_ground = weight * 4.75 + 20
+
+print("Ground Shipping $", cost_ground)
+      
+# Ground Shipping Premimum 🚚💨
+
+cost_ground_premium = 125.00
+
+print("Ground Shipping Premimium $", cost_ground_premium)
+
+# Drone Shipping 🛸
+
+if weight <= 2:
+  cost_drone = weight * 4.5
+elif weight <= 6:
+  cost_drone = weight * 9.00
+elif weight <= 10:
+  cost_drone = weight * 12.00
+else:
+  cost_drone = weight * 14.25
+
+print("Drone Shipping: $", cost_drone)
+
+In Python, for any specific data-type ( strings, booleans, lists, etc. ) 
+there is built-in functionality that we can use to create, manipulate, and even delete our data. 
+We call this built-in functionality a method.
+
+For lists, methods will follow the form of list_name.method(). 
+Some methods will require an input value that will go between the parenthesis of the method ( ).
+
+An example of a popular list method is .append(), which allows us to add an element to the end of a list.
+
+
+garden = []
+We can add the element "Tomatoes" by using the .append() method:
+
+garden.append("Tomatoes")
+ 
+print(garden)
+
+
+If we want to add a single element using +, we have to put it into a list with brackets ([]):
+
+my_list + [4]
+
+new_orders = ["lilac", "iris"]
+
+orders_combined = orders + new_orders
+
+broken_prices = [5, 3, 4, 5, 4] + [4]
+
+We can select a single element from a list by using square brackets ([]) 
+and the index of the list item. If we wanted to select the third element from the list, we’d use calls[2]:
+
+print(calls[2])
+Will output:
+
+Amare
+
+
+employees = ["Michael", "Dwight", "Jim", "Pam", "Ryan", "Andy", "Robert"]
+
+employee_four = employees[3]
+
+
+print(employees[4])
+
+
+
+
+This is equivalent to selecting the element with index 5:
+
+print(pancake_recipe[5])
+Would output:
+
+love
+Here are the negative index numbers for our list:
+
+Element	Index
+"eggs"	-6
+"flour"	-5
+"butter"	-4
+"milk"	-3
+"sugar"	-2
+"love"	-1
+
+
+shopping_list = ["eggs", "butter", "milk", "cucumbers", "juice", "cereal"]
+
+last_element = shopping_list[-1]
+
+index5_element = shopping_list[5]
+
+print(last_element)
+print(index5_element)
+
+shopping_line.remove("Chris")
+ 
+print(shopping_line)
+
+shopping_line.remove("Chris")
+print(shopping_line)
+
+heights = [["Jenny", 61], ["Alexus", 70], ["Sam", 67], ["Grace", 64], ["Vik", 68]]
+
+ages = [["Aaron", 15], ["Dhruti", 16]]
+
+
+#Your code below:
+
+
+#Checkpoint 1
+class_name_test = [["Jenny", 90], ["Alexus", 85.5], ["Sam", 83], ["Ellie", 101.5]]
+print(class_name_test)
+
+#Checkpoint 2
+sams_score = class_name_test[2][1]
+print(sams_score)
+
+#Checkpoint 3
+ellies_score = class_name_test[-1][-1]
+print(ellies_score)
+
+#Checkpoint 1
+incoming_class = [["Kenny", "American", 9], ["Tanya", "Russian", 9], ["Madison", "Indian", 7]]
+print(incoming_class)
+
+#Checkpoint 2
+incoming_class[2][2] = 8
+print(incoming_class)
+
+#Checkpoint 3
+incoming_class[-3][-3] = "Ken"
+print(incoming_class)
+
+customer_data = [["Ainsley", "Small", True ], ["Ben", "Large", False ], ["Chani", "Medium", True ], ["Depak", "Medium", False ]]
+print(customer_data)
+
+
+# Your code below: 
+
+first_names = ["Ainsley", "Ben", "Chani", "Depak"]
+
+
+preferred_size = ["Small", "Large", "Medium"]
+preferred_size.append("Medium")
+print(preferred_size)
+
+customer_data = [["Ainsley", "Small", True ], ["Ben", "Large", False ], ["Chani", "Medium", False ], ["Depak", "Medium", False ]]
+print(customer_data)
+
+customer_data[1].remove("Ben")
+
+customer_data_final = customer_data + [["Amit", "Large", True], ["Karim", "X-Large", False]]
+
+print(customer_data_final)
+
+
+
+
+
+# Checkpoint 1
+first_names = ["Ainsley", "Ben", "Chani", "Depak"]
+
+# Checkpoint 2
+preferred_size = ["Small", "Large", "Medium"]
+
+# Checkpoint 3
+preferred_size.append("Medium")
+print(preferred_size)
+
+# Checkpoint 4
+customer_data = [["Ainsley", "Small", True ], ["Ben", "Large", False ], ["Chani", "Medium", True ], ["Depak", "Medium", False ]]
+print(customer_data)
+
+# Checkpoint 5
+customer_data[2][2] = False
+
+# Checkpoint 6
+customer_data[1].remove(False)
+
+# Checkpoint 7
+customer_data_final = customer_data + [["Amit", "Large", True], ["Karim", "X-Large", False]]
+print(customer_data_final)
+
+list.method(input)
+ 
+# Example syntax for a built-in function 
+builtinfuncion(input)
+
+
+
+The order and number of the inputs is important. The .insert() method expects two inputs, 
+the first being a numerical index, followed by any value as the second input.
+
+When we insert an element into a list, all elements from the specified index 
+and up to the last index are shifted one index to the right. This does not apply to inserting an 
+element to the very end of a list as it will simply add an additional index and no other elements will need to shift.
+
+removed_element = cs_topics.pop()
+print(cs_topics)
+print(removed_element)
+
+Typing out all of those numbers takes time and the more numbers we type, the more likely it is that we have a typo that can cause
+ an error.
+
+Python gives us an easy way of creating these types of lists using a built-in function called range().
+
+The function range() takes a single input, and generates numbers starting at 0 and ending at the number before the input.
+
+So, if we want the numbers from 0 through 9, we use range(10) because 10 is 1 greater than 9:
+
+
+The first input represents the starting point. Here that is represented by 0
+
+The second input represents the ending point. Here that is represented by 5
+
+The third input represents in what increments the range will skip as it approaches the ending point. Here that is represented by 2
+
+
+last_two_elements = suitcase[-2:]
+print(last_two_elements)
+
+# Checkpoint 2
+slice_off_last_three = suitcase[:-3]
+print(slice_off_last_three)
+
+number_collection = [[100, 200], [100, 200], [475, 29], [34, 34]]
+If we wanted to know how often the sublist [100, 200] appears:
+
+num_pairs = number_collection.count([100, 200])
+print(num_pairs)
+Would output:
+
+2
+
+jake_votes = votes.count("Jake")
+
+# Checkpoint 2
+print(jake_votes)
+
+As we can see, the .sort() method sorted our list of names in alphabetical order.
+
+.sort() also provides us the option to go in reverse. Instead of sorting in ascending order like we just saw, 
+we can do so in descending order.
+
+names.sort(reverse=True)
+print(names)
+
+The syntax for the list .count() method is list.count(value)
+
+for temp in range(6):
+  print("Loop is on iteration number " + str(temp + 1))
+
+promise = "I will finish the python loops module!"
+for temp in range(5): 
+  print(promise)
+
+imilar to for loops, Python allows us to write elegant one-line while loops. Here is our previous example in a single line:
+
+count = 0
+while count <= 3: print(count); count += 1
+
+
+# While Loop Walkthrough
+count = 0
+print("Starting While Loop")
+while count <= 3:
+  # Loop Body
+  # Print if the condition is still true
+  print("Loop Iteration - count <= 3 is still true")
+  # Print the current value of count 
+  print("Count is currently " + str(count))
+  # Increment count
+  count += 1
+  print(" ----- ")
+print("While Loop ended")
+
+
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+numbers = [2, -1, 79, 33, -45]
+only_negative_doubled = []
+ 
+#for num in numbers:
+#  if num < 0: 
+#    only_negative_doubled.append(num * 2)
+# 
+#print(only_negative_doubled) 
+
+#list comprenhension
+#numbers = [2, -1, 79, 33, -45]
+#negative_doubled = [num * 2 for num in numbers if num < #0]
+#print(negative_doubled)
+
+numbers = [2, -1, 79, 33, -45]
+doubled = [num * 2 if num < 0 else num * 3 for num in numbers ]
+print(doubled)
+
+can_ride_coaster = [height for height in heights if height > 161]
+
+print(can_ride_coaster)
+
+
+# Your code below:
+
+single_digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+single_digits = range(10)
+squares = []
+
+for item in single_digits:
+  print(item)
+  squares.append(item**2)
+  
+print(squares)
+  
+cubes = [item**3 for item in single_digits]
+print(cubes)
+
+for i in range(len(hairstyles)):
+  total_revenue += prices[i] * last_week[i]
